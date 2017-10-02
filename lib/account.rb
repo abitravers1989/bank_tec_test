@@ -36,11 +36,11 @@ class Account
     accountstatement.display
   end
 
-  end
+end
 
-account = Account.new
-account.deposit(2000)
-account.deposittransaction
-account.withdraw(1000)
-account.withdrawaltransaction
-account.printstatement
+# account = Account.new
+# account.deposit(2000)
+# account.deposittransaction
+# account.withdraw(1000)
+# account.withdrawaltransaction
+# account.printstatement

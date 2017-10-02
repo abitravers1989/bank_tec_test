@@ -1,4 +1,3 @@
-
 require 'account'
 # this class is for storing the statement
 
