@@ -17,13 +17,17 @@ describe Account do
       expect { account.deposit(10) }.to change { account.balance }.from(0).to(10)
     end
   end
-end
 
-# describe Deposit do
-#
-#   it 'accepts an amount of money from a user and increments their account by that much' do
-#     let (2500) { balance }
-#      amount = 2000
-#      user.deposit
-#      expect (user.amount).to eq (2000)
-#   end
+  context '#withdrawal' do
+    it 'changes the account balance' do
+      expect { account.withdraw(10) }.to change { account.balance }
+    end
+
+    it 'decreases the account balance by amount withdrawn' do
+      account.deposit(10)
+      # allow(account).to receive (:deposit) { 10 }
+      # expect(account.balance).to eq 10
+      expect { account.withdraw(10) }.to change { account.balance }.from(10).to(0)
+    end
+  end
+end

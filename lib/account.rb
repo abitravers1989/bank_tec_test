@@ -9,4 +9,8 @@ class Account
   def deposit(n)
     @balance += n
   end
+
+  def withdraw(n)
+    @balance -= n
+  end
 end
