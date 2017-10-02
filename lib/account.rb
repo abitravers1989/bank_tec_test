@@ -1,4 +1,5 @@
 require 'Date'
+require 'statement_display'
 # this represents a users/ clinets account
 class Account
   attr_accessor :balance, :statement, :credit
@@ -19,13 +20,6 @@ class Account
     @statement << { credit: @credit, balance: @balance, date: date }
   end
 
-
-  def depositprocess(n)
-    account = Account.new
-    account.deposit(n)
-    account.deposittransaction
-  end
-
   def withdraw(n)
     @balance -= n
     @debit = n
@@ -36,16 +30,17 @@ class Account
     @statement << { debit: @debit, balance: @balance, date: date }
   end
 
-  def withdrawalprocess(n)
-    account = Account.new
-    account.withdraw(n)
-    account.withdrawaltransaction
+  def printstatement
+    accountstatement= Statement_Display.new
+    accountstatement.printstatmentheader
+    accountstatement.display
   end
 
   end
 
-  ac = Account.new
-  ac.deposit(20)
-  ac.statement
-  ac.printstatmentheader
-  ac.display
+account = Account.new
+account.deposit(2000)
+account.deposittransaction
+account.withdraw(1000)
+account.withdrawaltransaction
+account.printstatement
