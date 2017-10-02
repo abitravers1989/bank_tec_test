@@ -4,15 +4,15 @@ require 'spec_helper'
 describe Account do
   let (:account) { Account.new }
 
-  context '#initialize'
+  context '#initialize' do
+    it 'there is a balance in the account which starts at zero' do
+      expect(account.balance).to eq 0
+    end
 
-  it 'there is a balance in the account which starts at zero' do
-    expect(account.balance).to eq 0
-  end
-
-  it 'the statement is an empty array' do
-    expect(account.statement).to be_instance_of Array
-    expect(account.statement).to be_empty
+    it 'the statement is an empty array' do
+      expect(account.statement).to be_instance_of Array
+      expect(account.statement).to be_empty
+    end
   end
 
   context '#deposit' do
@@ -22,9 +22,6 @@ describe Account do
 
     it 'increases the account balance by amount deposited' do
       expect { account.deposit(10) }.to change { account.balance }.from(0).to(10)
-    end
-
-    it 'records the amount given to it' do
     end
   end
 
