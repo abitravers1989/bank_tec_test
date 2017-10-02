@@ -1,19 +1,29 @@
-require 'Date'
+require 'date'
 require 'account'
 # this class is for storing the statement
 
 class Statement
-  attr_accessor :date
 
-  def initialize
-    @date = []
+  def printstatmentheader
+    print "date || credit || debit || balance"
   end
 
-  def createdate
-    @date << Date.today.strftime('%d/%m/%Y')
+  def display
+    @statement.each do |y|
+      # string = []
+      print y[:date]
+      print " || "
+      print y[:credit]
+      print " || "
+      print y[:debit]
+      print " || "
+      print y[:balance]
+    end
   end
+
 end
 
 st = Statement.new
-st.createdate
-st.date
+ac = Account.new
+ac.deposit(20)
+st.printstatmentheader
