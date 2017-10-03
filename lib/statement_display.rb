@@ -13,13 +13,19 @@ class Statement_Display
     print 'date || credit || debit || balance'
   end
 
+  def tostringandjoin(n)
+   n.to_s + ' || '
+  end
+
   def displaysetting
     @transactioninfo.each do |y|
-      @string << y[:date].to_s + ' || ' + y[:credit].to_s + ' || ' + y[:debit].to_s + ' || ' + y[:balance].to_s
+      @string << tostringandjoin(y[:date]) + tostringandjoin(y[:credit]) + tostringandjoin(y[:debit]) + tostringandjoin(y[:balance])
     end
   end
 
+
   def display
+    p @string
     displaysetting
     @string.each do |x|
       puts x
