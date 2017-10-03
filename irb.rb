@@ -25,7 +25,7 @@ class Statement_Display
 
   def display
     @transactioninfo.each do |y|
-      print y[:date]
+      puts y[:date] + ' || '
       print ' || '
       print y[:credit]
       print ' || '

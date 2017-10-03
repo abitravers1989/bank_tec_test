@@ -10,9 +10,10 @@ describe Account do
     end
 
     it 'there is an empty array to representa a transaction' do
-      expect(account.statement).to be_instance_of Array
-      expect(account.statement).to be_empty
+      expect(account.transaction).to be_instance_of Array
+      expect(account.transaction).to be_empty
     end
+
   end
 
   context '#deposit' do
@@ -22,6 +23,23 @@ describe Account do
 
     it 'increases the account balance by amount deposited' do
       expect { account.deposit(10) }.to change { account.balance }.from(0).to(10)
+    end
+  end
+
+  context '#deposittransaction' do
+    before (:each) do
+      account.deposit(10)
+      account.deposittransaction
+    end
+
+    it 'Adds to the transaction array' do
+     expect(account.transaction).not_to be_empty
+    end
+    it 'creates a new instanse of date' do
+      expect(account.transaction.date).to include (:date)
+    end
+    it 'Adds credit balance and date to the transaction array' do
+
     end
   end
 
