@@ -13,7 +13,6 @@ describe Account do
       expect(account.transaction).to be_instance_of Array
       expect(account.transaction).to be_empty
     end
-
   end
 
   context '#deposit' do
@@ -33,13 +32,11 @@ describe Account do
     end
 
     it 'Adds to the transaction array' do
-     expect(account.transaction).not_to be_empty
+      expect(account.transaction).not_to be_empty
     end
-    it 'creates a new instanse of date' do
-      expect(account.transaction.date).to include (:date)
-    end
-    it 'Adds credit balance and date to the transaction array' do
 
+    it 'Adds credit balance and date to the transaction array' do
+      expect(account.transaction).to include ({ credit: 10, balance: 10, date: '03/10/2017' })
     end
   end
 

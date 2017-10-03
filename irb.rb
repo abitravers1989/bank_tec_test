@@ -12,9 +12,7 @@ class Datenow
   end
 end
 
-
 class Statement_Display
-
   def initialize(transactioninfo)
     @transactioninfo = transactioninfo
   end
@@ -35,7 +33,6 @@ class Statement_Display
     end
   end
 end
-
 
 class Account
   attr_accessor :balance, :transaction, :credit, :debit

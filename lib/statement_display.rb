@@ -2,7 +2,6 @@ require 'account'
 # this class is for storing the statement
 
 class Statement_Display
-
   def initialize(transactioninfo)
     @transactioninfo = transactioninfo
   end
