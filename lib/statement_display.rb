@@ -14,7 +14,7 @@ class Statement_Display
   end
 
   def formatter(n)
-   n.to_s + ' || '
+    n.to_s + ' || '
   end
 
   def displaysetting
@@ -22,7 +22,6 @@ class Statement_Display
       @string << formatter(y[:date]) + formatter(y[:credit]) + formatter(y[:debit]) + formatter(y[:balance])
     end
   end
-
 
   def display
     displaysetting

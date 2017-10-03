@@ -31,8 +31,8 @@ describe Statement_Display do
 
   context '#display' do
     it 'displays the transaction info to standard output' do
-       statement = Statement_Display.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }])
-       expect { statement.display }.to output("03/10/2017 || 2000 ||  || 2000 || \n").to_stdout
+      statement = Statement_Display.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }])
+      expect { statement.display }.to output("03/10/2017 || 2000 ||  || 2000 || \n").to_stdout
     end
   end
 end
