@@ -1,26 +1,41 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/abitravers/gitDir/bank_tec_test/spec/date_spec.rb": [
+      "/Users/abitravers/gitDir/bank_tec_test/spec/datenow_spec.rb": [
         1,
         1,
         null,
         1,
         2,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         1,
         1,
         1,
         null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/abitravers/gitDir/bank_tec_test/lib/datenow.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null,
         1,
-        2,
         1,
-        1,
-        null,
-        0,
-        null,
         null,
         null
       ],
@@ -41,6 +56,6 @@
         null
       ]
     },
-    "timestamp": 1506979528
+    "timestamp": 1507017855
   }
 }

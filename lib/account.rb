@@ -31,11 +31,10 @@ class Account
   end
 
   def printstatement
-    accountstatement= Statement_Display.new
+    accountstatement = Statement_Display.new
     accountstatement.printstatmentheader
     accountstatement.display
   end
-
 end
 
 # account = Account.new
