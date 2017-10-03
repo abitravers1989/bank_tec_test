@@ -1,6 +1,42 @@
-require 'datenow'
-require 'statement_display'
-# this represents a users/ clinets account
+require 'Date'
+
+class Datenow
+  attr_accessor :datenow
+
+  def initialize
+    @datenow = datenow
+  end
+
+  def createdate
+    @datenow = Date.today.strftime('%d/%m/%Y')
+  end
+end
+
+
+class Statement_Display
+
+  def initialize(transactioninfo)
+    @transactioninfo = transactioninfo
+  end
+
+  def printstatmentheader
+    print 'date || credit || debit || balance'
+  end
+
+  def display
+    @transactioninfo.each do |y|
+      print y[:date]
+      print ' || '
+      print y[:credit]
+      print ' || '
+      print y[:debit]
+      print ' || '
+      print y[:balance]
+    end
+  end
+end
+
+
 class Account
   attr_accessor :balance, :transaction, :credit, :debit
 

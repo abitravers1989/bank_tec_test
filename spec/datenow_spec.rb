@@ -3,7 +3,6 @@ require 'spec_helper'
 
 describe Datenow do
   let (:date) { Datenow.new }
-  p :date
 
   # context '#initialize' do
   #   it 'is initialized with a date' do

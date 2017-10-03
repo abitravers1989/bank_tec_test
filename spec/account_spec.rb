@@ -9,7 +9,7 @@ describe Account do
       expect(account.balance).to eq 0
     end
 
-    it 'the statement is an empty array' do
+    it 'there is an empty array to representa a transaction' do
       expect(account.statement).to be_instance_of Array
       expect(account.statement).to be_empty
     end
