@@ -1,18 +1,16 @@
 # Bank Tech Test
 
 
-# Title of project
+# Simple Bank Account in Ruby
 
-Using OO Design and TDD:
+A programme where a client can:
 
-A client can
+1. Deposit money
 
-Deposit money
-
-Withdraw money
+2. Withdraw money
 
 
-Print account statement, including:
+3. Print account statement, including:
 
 - Create date of deposited or withdrawn money.
 
@@ -33,10 +31,24 @@ Print account statement, including:
 
 ## Usage
 
-`command_to_start` (e.g. `rackup` or `rails s`)
-Navigate to `http://localhost:4567/`
+In command line run
+
+`irb`
+
+Copy and paste the datenow.rb, then statement_display.rb then account.rb class's into irb.
+
+Then type in command line:
+
+`account = Account.new
+account.deposit(2000)
+account.deposittransaction
+account.withdraw(1000)
+account.withdrawaltransaction
+account.printstatement`
 
 
 ## Running tests
 
-`test_command` (e.g. `rspec`)
+In command Line run:
+
+`rspec`
