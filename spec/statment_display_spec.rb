@@ -10,4 +10,10 @@ describe Statement_Display do
       expect{statement.printstatmentheader}.to output('date || credit || debit || balance').to_stdout
     end
   end
+
+  context ''
 end
+
+
+statement = Statement_Display.new([{:credit=>2000, :balance=>2000, :date=>"03/10/2017"}, {:debit=>1000, :balance=>1000, :date=>"03/10/2017"}])
+statement.display
