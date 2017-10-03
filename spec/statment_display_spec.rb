@@ -7,7 +7,7 @@ describe Statement_Display do
 
   context '#printstatmentheader' do
     it 'prints the statement header' do
-      expect(statement.printstatmentheader).to output("date || credit || debit || balance").to_stderr
+      expect{statement.printstatmentheader}.to output('date || credit || debit || balance').to_stdout
+    end
   end
-end
 end

@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 gem 'capybara'
+gem 'flog'
 gem 'rake'
 gem 'rspec'
 gem 'rubocop'
-gem 'flog'
 gem 'simplecov', require: false, group: :test
 gem 'simplecov-console', require: false, group: :test
