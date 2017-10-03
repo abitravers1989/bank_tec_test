@@ -52,4 +52,21 @@ describe Account do
       expect { account.withdraw(10) }.to change { account.balance }.from(10).to(0)
     end
   end
+
+  context '#withdrawaltransaction' do
+    before (:each) do
+      account.deposit(2000)
+      account.deposittransaction
+      account.withdraw(1000)
+      account.withdrawaltransaction
+    end
+
+    it 'Adds to the transaction array' do
+      expect(account.transaction).not_to be_empty
+    end
+
+    # it 'Adds credit balance and date to the transaction array' do
+    #   expect(account.transaction).to include {:credit => 2000, :balance => 2000, :date => "03/10/2017"}, {:debit => 1000, :balance => 1000, :date => "03/10/2017"}
+    # end
+  end
 end
