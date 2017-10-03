@@ -1,5 +1,5 @@
 require 'Date'
-
+# to create date
 class Datenow
   attr_accessor :datenow
 
