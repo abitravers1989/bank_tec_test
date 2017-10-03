@@ -23,23 +23,22 @@
         null,
         null
       ],
-      "/Users/abitravers/gitDir/bank_tec_test/spec/statment_spec.rb": [
+      "/Users/abitravers/gitDir/bank_tec_test/spec/statment_display_spec.rb": [
         1,
         1,
         1,
         null,
         1,
+        2,
+        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1507028566
+    "timestamp": 1507033257
   }
 }

@@ -69,4 +69,11 @@ describe Account do
     #   expect(account.transaction).to include {:credit => 2000, :balance => 2000, :date => "03/10/2017"}, {:debit => 1000, :balance => 1000, :date => "03/10/2017"}
     # end
   end
+
+  # context '#printstatement'
+  #   let (:statement) { Statement_Display.new({ credit: 10, balance: 10, date: '03/10/2017' }) }
+  #
+  #   it 'calls on the methods in statement display' do
+  #     expect(account.printstatement).to include ("date || credit || debit || balance")
+  #  end
 end

@@ -10,6 +10,16 @@ class Statement_Display
     print 'date || credit || debit || balance'
   end
 
+  # def transactionstring
+  #   @transactioninfo.each do |y|
+  # end
+  #
+  # def display
+  #   @transactioninfo.each do |y|
+  #     k = puts y[:date] + y[:credit] + y[:debit] + y[:balance]
+  #     print k.join(" || ")
+  #   end
+
   def display
     @transactioninfo.each do |y|
       print y[:date]
@@ -20,5 +30,5 @@ class Statement_Display
       print ' || '
       print y[:balance]
     end
-  end
+end
 end
