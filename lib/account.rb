@@ -32,9 +32,9 @@ class Account
   end
 
   def print_statement
-    accountstatement = StatementDisplay.new(@transaction)
-    accountstatement.printstatmentheader
-    accountstatement.display
+    account_statement = StatementDisplay.new(@transaction)
+    account_statement.print_statment_header
+    account_statement.display
   end
 end
 

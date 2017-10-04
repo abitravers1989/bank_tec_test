@@ -2,14 +2,14 @@ require 'account'
 
 # this class is for storing the statement
 class StatementDisplay
-  attr_accessor :string, :transactioninfo
+  attr_accessor :string, :transaction_info
 
-  def initialize(transactioninfo)
-    @transactioninfo = transactioninfo
+  def initialize(transaction_info)
+    @transaction_info = transaction_info
     @string = []
   end
 
-  def print_statmentheader
+  def print_statment_header
     print 'date || credit || debit || balance'
   end
 
@@ -18,7 +18,7 @@ class StatementDisplay
   end
 
   def display
-    @transactioninfo.each do |y|
+    @transaction_info.each do |y|
       puts string_intepolation(y)
     end
   end
