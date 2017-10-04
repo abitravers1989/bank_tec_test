@@ -39,12 +39,12 @@ Copy and paste the datenow.rb, then statement_display.rb then account.rb class's
 
 Then type in command line:
 
-`account = Account.new
-account.deposit(2000)
-account.deposittransaction
-account.withdraw(1000)
-account.withdrawaltransaction
-account.printstatement`
+`account = Account.new`
+`account.deposit(2000)`
+`account.deposittransaction`
+`account.withdraw(1000)`
+`account.withdrawaltransaction`
+`account.printstatement`
 
 
 ## Running tests

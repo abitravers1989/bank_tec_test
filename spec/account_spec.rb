@@ -36,7 +36,7 @@ describe Account do
     end
 
     it 'Adds credit balance and date to the transaction array' do
-      expect(account.transaction).to include ({ credit: 10, balance: 10, date: '03/10/2017' })
+      expect(account.transaction).to include ({ credit: 10, balance: 10, date: '04/10/2017' })
     end
   end
 
