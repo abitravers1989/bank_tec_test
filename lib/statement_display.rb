@@ -24,4 +24,17 @@ class StatementDisplay
   end
 end
 
+
+class Output
+
+  def initialize(output=STDOUT)
+    @output = output
+  end
+
+  def print(statement)
+    puts statement
+  end
+
+end
+
 # statement = StatementDisplay.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }, { debit: 1000, balance: 1000, date: '03/10/2017' }])

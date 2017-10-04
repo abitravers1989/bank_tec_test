@@ -17,7 +17,7 @@ class Account
   end
 
   def deposit_transaction
-    date = Datenow.new.createdate
+    date = DateNow.new.create_date
     @transaction << { credit: @credit, balance: @balance, date: date }
   end
 
@@ -27,10 +27,15 @@ class Account
   end
 
   def withdrawal_transaction
-    date = Datenow.new.createdate
+    date = DateNow.new.create_date
     @transaction << { debit: @debit, balance: @balance, date: date }
   end
 
+# controls application
+# logs transaction
+# calculates balance
+
+# use class instead of hash !
   def print_statement
     account_statement = StatementDisplay.new(@transaction)
     account_statement.print_statment_header

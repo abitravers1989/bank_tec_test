@@ -2,7 +2,9 @@ require 'account'
 require 'spec_helper'
 
 describe Account do
-  let (:account) { Account.new }
+  # this is just assigning
+  let(:account) { Account.new }
+  # don't double a class you are trying to test
 
   context '#initialize' do
     it 'there is a balance in the account which starts at zero' do
@@ -17,11 +19,11 @@ describe Account do
 
   context '#deposit' do
     it 'changes the account balance' do
-      expect { account.deposit(10) }.to change { account.balance }
+      expect { account.deposit(10) }.to (change{ account.balance })
     end
 
     it 'increases the account balance by amount deposited' do
-      expect { account.deposit(10) }.to change { account.balance }.from(0).to(10)
+      expect { account.deposit(10) }.to (change{ account.balance }.from(0).to(10))
     end
   end
 
@@ -36,20 +38,20 @@ describe Account do
     end
 
     it 'Adds credit balance and date to the transaction array' do
-      expect(account.transaction).to include ({ credit: 10, balance: 10, date: '04/10/2017' })
+      expect(account.transaction).to include({ credit: 10, balance: 10, date: '04/10/2017' })
     end
   end
 
   context '#withdrawal' do
     it 'changes the account balance' do
-      expect { account.withdraw(10) }.to change { account.balance }
+      expect { account.withdraw(10) }.to (change{ account.balance })
     end
 
     it 'decreases the account balance by amount withdrawn' do
       account.deposit(10)
       # allow(account).to receive (:deposit) { 10 }
       # expect(account.balance).to eq 10
-      expect { account.withdraw(10) }.to change { account.balance }.from(10).to(0)
+      expect { account.withdraw(10) }.to (change{ account.balance }.from(10).to(0))
     end
   end
 
