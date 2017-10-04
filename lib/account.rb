@@ -16,7 +16,7 @@ class Account
     @credit = n
   end
 
-  def deposittransaction
+  def deposit_transaction
     date = Datenow.new.createdate
     @transaction << { credit: @credit, balance: @balance, date: date }
   end
@@ -26,21 +26,21 @@ class Account
     @debit = n
   end
 
-  def withdrawaltransaction
+  def withdrawal_transaction
     date = Datenow.new.createdate
     @transaction << { debit: @debit, balance: @balance, date: date }
   end
 
-  def printstatement
-    accountstatement = Statement_Display.new(@transaction)
+  def print_statement
+    accountstatement = StatementDisplay.new(@transaction)
     accountstatement.printstatmentheader
     accountstatement.display
   end
 end
 
-account = Account.new
-account.deposit(2000)
-account.deposittransaction
-account.withdraw(1000)
-account.withdrawaltransaction
-account.printstatement
+# account = Account.new
+# account.deposit(2000)
+# account.deposit_transaction
+# account.withdraw(1000)
+# account.withdrawal_transaction
+# account.print_statement

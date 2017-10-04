@@ -2,17 +2,17 @@ require 'statement_display'
 require 'account'
 require 'spec_helper'
 
-describe Statement_Display do
-  context '#printstatmentheader' do
+describe StatementDisplay do
+  context '#print_statmentheader' do
     it 'prints the statement header' do
-      statement = Statement_Display.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }, { debit: 1000, balance: 1000, date: '03/10/2017' }])
-      expect { statement.printstatmentheader }.to output('date || credit || debit || balance').to_stdout
+      statement = StatementDisplay.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }, { debit: 1000, balance: 1000, date: '03/10/2017' }])
+      expect { statement.print_statmentheader }.to output('date || credit || debit || balance').to_stdout
     end
   end
 
   context '#display' do
     it 'displays the transaction info to standard output' do
-      statement = Statement_Display.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }])
+      statement = StatementDisplay.new([{ credit: 2000, balance: 2000, date: '03/10/2017' }])
       expect { statement.display }.to output("03/10/2017 || 2000 ||  || 2000\n").to_stdout
     end
   end

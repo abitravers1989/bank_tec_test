@@ -25,10 +25,10 @@ describe Account do
     end
   end
 
-  context '#deposittransaction' do
+  context '#deposit_transaction' do
     before (:each) do
       account.deposit(10)
-      account.deposittransaction
+      account.deposit_transaction
     end
 
     it 'Adds to the transaction array' do
@@ -53,12 +53,12 @@ describe Account do
     end
   end
 
-  context '#withdrawaltransaction' do
+  context '#withdrawal_transaction' do
     before (:each) do
       account.deposit(2000)
-      account.deposittransaction
+      account.deposit_transaction
       account.withdraw(1000)
-      account.withdrawaltransaction
+      account.withdrawal_transaction
     end
 
     it 'Adds to the transaction array' do
@@ -70,7 +70,7 @@ describe Account do
     # end
   end
 
-  # context '#printstatement'
+  # context '#print_statement'
   #   let (:statement) { Statement_Display.new({ credit: 10, balance: 10, date: '03/10/2017' }) }
   #
   #   it 'calls on the methods in statement display' do
